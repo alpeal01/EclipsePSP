@@ -1,0 +1,15 @@
+package es.floridauniversiraria.T1Actividades;
+
+import java.util.Scanner;
+
+public class Ej2 {
+	public static void main(String[] args) {
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		String nom = teclado.nextLine();
+		
+		System.out.println(nom);
+	}
+
+}

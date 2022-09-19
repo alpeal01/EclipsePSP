@@ -1,0 +1,24 @@
+package es.floridauniversiraria.T1Actividades;
+import java.util.Scanner;
+public class Ej7 {
+
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int i = 5;
+		
+		int sum = 0;
+		
+		while(i < 5) {
+			
+			sum += sc.nextInt();
+			i++;
+			
+		}
+		
+		System.out.println("La suma es :" + sum);
+		sc.close();
+		
+	}
+}
