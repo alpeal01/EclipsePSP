@@ -28,6 +28,6 @@ de la suerte (utiliza el algoritmo de cálculo que prefieras)
 		
 		System.out.println("Tu numero de la suerte es: "+ numLuck);
 		
-		
+		sc.close();
 	}
 }

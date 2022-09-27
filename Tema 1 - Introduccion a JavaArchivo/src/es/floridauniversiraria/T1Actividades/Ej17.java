@@ -52,7 +52,7 @@ public class Ej17 {
 			
 		}
 		
-		
+		sc.close();
 		
 		
 
