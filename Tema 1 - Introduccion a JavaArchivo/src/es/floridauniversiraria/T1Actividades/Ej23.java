@@ -19,6 +19,8 @@ public class Ej23 {
 		int num = 1;
 
 		ArrayList<String> list = new ArrayList<String>(5);
+			
+		
 
 		do {
 
