@@ -6,7 +6,7 @@ class Act1 {
 		int sum = 0;
 		
 		
-		System.out.println("Sumando de " + num1 + " hasta " + num2);
+		System.out.println("Sumando de " + num1 +" hasta " + num2);
 		for (int i = num1; i <= num2; i++) {
 
 			sum += i;
@@ -22,8 +22,9 @@ class Act1 {
 		Act1 act1 = new Act1();
 
 		int sum = act1.sumador(Integer.parseInt(args[0]),Integer.parseInt(args[1]));
+		 System.out.println(sum);
 
-		System.out.println(sum);
+	
 
 	}
 
