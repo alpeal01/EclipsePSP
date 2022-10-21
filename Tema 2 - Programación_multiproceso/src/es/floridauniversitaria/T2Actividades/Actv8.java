@@ -98,7 +98,7 @@ public class Actv8 {
 	}
 
 	public static void main(String[] args) {
-
+		long startTime = System.nanoTime();
 		ArrayList<String> nEOsList = loadNEOsFile();
 		String[] nEOs;
 		double prob;
@@ -127,15 +127,19 @@ public class Actv8 {
 			prob = Double.parseDouble(nEOs[1]);
 
 			if (prob > 10) {
-				System.err.println(nEOs[0] + ": Peligro!!! Probabilidad de impacto del " + (formatea.format(prob)));
+				System.err.println(nEOs[0] + ": Peligro!!! Probabilidad de impacto del " + (formatea.format(prob)+"%"));
 
 			} else {
-				System.out.println(nEOs[0] + ": Baja probabilidad de impacto. El mundo vive otro día...");
+				System.out.println(nEOs[0] + ": Baja probabilidad de impacto: "+formatea.format(prob)+"%. El mundo vive otro día...");
 
 			}
 
 		}
-
+		long endTime = System.nanoTime();
+		long duration = (endTime - startTime);
+		
+		System.out.println("Duration: "+duration / 1000000000+" s");
+		
 	}
 
 }
