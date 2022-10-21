@@ -102,6 +102,7 @@ public class Actv8 {
 		ArrayList<String> nEOsList = loadNEOsFile();
 		String[] nEOs;
 		double prob;
+		int lines;
 		DecimalFormat formatea = new DecimalFormat("#.##");
 		for (String data : nEOsList) {
 
@@ -109,17 +110,13 @@ public class Actv8 {
 			execute(nEOs[0], nEOs[1], nEOs[2]);
 
 		}
+		lines = nEOsList.size();
 		nEOs = null;
 		nEOsList = null;
-		
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
-		nEOsList = compNEOs();
+		do {
+			nEOsList = compNEOs();
+		} while (nEOsList.size() < lines);
 
 		for (String data : nEOsList) {
 
@@ -127,19 +124,21 @@ public class Actv8 {
 			prob = Double.parseDouble(nEOs[1]);
 
 			if (prob > 10) {
-				System.err.println(nEOs[0] + ": Peligro!!! Probabilidad de impacto del " + (formatea.format(prob)+"%"));
+				System.err
+						.println(nEOs[0] + ": Peligro!!! Probabilidad de impacto del " + (formatea.format(prob) + "%"));
 
 			} else {
-				System.out.println(nEOs[0] + ": Baja probabilidad de impacto: "+formatea.format(prob)+"%. El mundo vive otro día...");
+				System.out.println(nEOs[0] + ": Baja probabilidad de impacto: " + formatea.format(prob)
+						+ "%. El mundo vive otro día...");
 
 			}
 
 		}
 		long endTime = System.nanoTime();
 		long duration = (endTime - startTime);
-		
-		System.out.println("Duration: "+duration / 1000000000+" s");
-		
+
+		System.out.println("Duration: " + duration / 1000000000.000 + " s");
+
 	}
 
 }
