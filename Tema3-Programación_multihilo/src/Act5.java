@@ -14,6 +14,15 @@ public class Act5 {
 			hilo.start();
 	
 		}
+		
+//		try {
+//			Thread.sleep(1000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+		System.out.println("Se han consumido "+KFC.getAlitasConsumidas());
 	}
 
 }

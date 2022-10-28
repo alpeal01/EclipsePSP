@@ -3,6 +3,13 @@ public class  KFC implements Runnable {
 	int alitas = 100;
 	static int alitasConsumidas = 0;
 	
+	
+
+	public static int getAlitasConsumidas() {
+		return alitasConsumidas;
+	}
+
+
 
 	synchronized void consumirAlita (String nombre,int alitPedidas) {
 	
