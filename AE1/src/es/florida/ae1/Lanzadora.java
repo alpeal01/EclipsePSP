@@ -8,6 +8,11 @@ import javax.swing.JOptionPane;
 import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.lang.ProcessBuilder.Redirect;
+import java.util.ArrayList;
+import java.util.List;
 import java.awt.event.ActionEvent;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
@@ -78,6 +83,40 @@ public class Lanzadora {
 		
 	}
 	
+	public void execute(int [] croqList) {
+		
+		String clase = "es.florida.ae1.procesadora";
+
+		File arch = new File("croquetasLog.txt");
+
+		try {
+			String javaHome = System.getProperty("java.home");
+			String javaBin = javaHome + File.separator + "bin" + File.separator + "java";
+			String classpath = System.getProperty("java.class.path");
+			String className = clase;
+
+			List<String> command = new ArrayList<>();
+			command.add(javaBin);
+			command.add("-cp");
+			command.add(classpath);
+			command.add(className);
+			command.add(Integer.toString(croqList[0]));
+			command.add(Integer.toString(croqList[1]));
+			command.add(Integer.toString(croqList[2]));
+			command.add(Integer.toString(croqList[3]));
+			
+			ProcessBuilder builder = new ProcessBuilder(command);
+
+			builder.redirectOutput(Redirect.appendTo(arch)).start();
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
 
 	/**
 	 * Create the application.
@@ -136,6 +175,7 @@ public class Lanzadora {
 					if(compCroquetas(croqList[0],croqList[1],croqList[2],croqList[3])) {
 						
 						System.out.println("cargar procesadora");
+						execute(croqList);
 						
 					}
 					
