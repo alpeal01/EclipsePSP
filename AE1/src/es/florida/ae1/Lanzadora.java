@@ -85,7 +85,7 @@ public class Lanzadora {
 	
 	public void execute(int [] croqList) {
 		
-		String clase = "es.florida.ae1.procesadora";
+		String clase = "es.florida.ae1.Procesadora";
 
 		File arch = new File("croquetasLog.txt");
 
@@ -105,10 +105,12 @@ public class Lanzadora {
 			command.add(Integer.toString(croqList[2]));
 			command.add(Integer.toString(croqList[3]));
 			
+			
 			ProcessBuilder builder = new ProcessBuilder(command);
-
 			builder.redirectOutput(Redirect.appendTo(arch)).start();
+			
 
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -174,7 +176,7 @@ public class Lanzadora {
 					
 					if(compCroquetas(croqList[0],croqList[1],croqList[2],croqList[3])) {
 						
-						System.out.println("cargar procesadora");
+					
 						execute(croqList);
 						
 					}
