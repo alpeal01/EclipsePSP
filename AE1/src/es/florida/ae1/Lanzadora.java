@@ -8,14 +8,17 @@ import javax.swing.JOptionPane;
 import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
-import java.lang.ProcessBuilder.Redirect;
 import java.util.ArrayList;
 import java.util.List;
 import java.awt.event.ActionEvent;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
+import javax.swing.JTextArea;
 
 
 public class Lanzadora {
@@ -25,6 +28,7 @@ public class Lanzadora {
 	private JSpinner spinBacalao;
 	private JSpinner spinQueso;
 	private JSpinner spinJamon;
+	JTextArea jtxState;
 	
 
 	/**
@@ -107,7 +111,8 @@ public class Lanzadora {
 			
 			
 			ProcessBuilder builder = new ProcessBuilder(command);
-			builder.redirectOutput(Redirect.appendTo(arch)).start();
+			
+			builder.redirectOutput(arch).start();
 			
 
 			
@@ -161,9 +166,21 @@ public class Lanzadora {
 		btnProcesar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int [] croqList;
-				//spinJamon.getValue()
-	
-				
+				String line;
+				boolean loop = true;
+				try {
+					File dir = new File("./croquetasLog.txt");
+					if(!dir.isFile()) {
+						try {
+							dir.createNewFile();
+						} catch (IOException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+					}
+					
+					FileReader fr = new FileReader(dir);
+					BufferedReader br = new BufferedReader(fr);
 					
 				
 					croqList= new int[] {
@@ -178,16 +195,54 @@ public class Lanzadora {
 						
 					
 						execute(croqList);
+						//Este entramado es para mostrar el log por interfaz
+						try {
+						Thread.sleep(3000);
+						while(loop) {
+							Thread.sleep(5000);
+							line = br.readLine();
+							
+							if(line != null) {
+								if(line.equals("0")) {
+									
+									loop = false;
+								}
+								else {
+								
+									System.out.println(line);
+									jtxState.setText(line);
+								}
+							}
+							
+							
+							
+						}
+						JOptionPane.showMessageDialog(null,br.readLine() , "InfoBox: " + "Poceso Finalizado", JOptionPane.INFORMATION_MESSAGE);
+							
 						
+						}catch(Exception exc) {
+							exc.printStackTrace();
+						}
+					}
+					
+					try {
+						br.close();
+						fr.close();
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
 					}
 					
 					
-					
+				} catch (FileNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 
 				
 			}
 		});
-		btnProcesar.setBounds(392, 280, 89, 23);
+		btnProcesar.setBounds(392, 278, 89, 23);
 		frmFabricadorCroquetil.getContentPane().add(btnProcesar);
 		
 		spinPollo = new JSpinner();
@@ -213,5 +268,11 @@ public class Lanzadora {
 		spinJamon.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		spinJamon.setBounds(392, 38, 89, 23);
 		frmFabricadorCroquetil.getContentPane().add(spinJamon);
+		
+		jtxState = new JTextArea();
+		jtxState.setText("Procesadora preparada...");
+		jtxState.setFont(new Font("Monospaced", Font.PLAIN, 15));
+		jtxState.setBounds(10, 279, 370, 22);
+		frmFabricadorCroquetil.getContentPane().add(jtxState);
 	}
 }

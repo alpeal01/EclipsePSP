@@ -77,7 +77,7 @@ public class Procesadora implements Runnable {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Ejecucion de la procesadora");
+		System.out.println("Iniciando procesadora");
 		
 		long inicio = System.currentTimeMillis();
 		long fin;
@@ -105,6 +105,8 @@ public class Procesadora implements Runnable {
 				e.printStackTrace();
 			}
 		}
+		System.out.println("Fabricacion de croquetas finalizada");
+		System.out.println("0");
 		fin = System.currentTimeMillis();
 		System.out.println("Fabricacion finalizada tiempo tardado: " + (double) ((fin - inicio) / 1000) + " s");
 
