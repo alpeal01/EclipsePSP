@@ -34,6 +34,7 @@ public class Lanzadora {
 	JSpinner spinPCola;
 	JSpinner spinJCola;
 	
+	
 
 	/**
 	 * Launch the application.
@@ -50,6 +51,9 @@ public class Lanzadora {
 			}
 		});
 	}
+	
+
+
 	boolean compCroquetas(int j, int p,int b, int q){
 		
 		if(j % 6!= 0) {
@@ -91,7 +95,7 @@ public class Lanzadora {
 		
 	}
 	
-	public void execute(int [] croqList, String [] orden) {
+	public void execute(ArrayList <Integer> croqList, ArrayList <String> orden) {
 		
 		String clase = "es.florida.ae1.Procesadora";
 
@@ -108,14 +112,14 @@ public class Lanzadora {
 			command.add("-cp");
 			command.add(classpath);
 			command.add(className);
-			command.add(Integer.toString(croqList[0]));
-			command.add(Integer.toString(croqList[1]));
-			command.add(Integer.toString(croqList[2]));
-			command.add(Integer.toString(croqList[3]));
-			command.add(orden[0]);
-			command.add(orden[1]);
-			command.add(orden[2]);
-			command.add(orden[3]);
+			command.add(Integer.toString(croqList.get(0)));
+			command.add(Integer.toString(croqList.get(1)));
+			command.add(Integer.toString(croqList.get(2)));
+			command.add(Integer.toString(croqList.get(3)));
+			command.add(orden.get(0));
+			command.add(orden.get(1));
+			command.add(orden.get(2));
+			command.add(orden.get(3));
 			
 			
 			ProcessBuilder builder = new ProcessBuilder(command);
@@ -173,12 +177,11 @@ public class Lanzadora {
 		JButton btnProcesar = new JButton("Procesar");
 		btnProcesar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int [] croqList = new int[4];
-//				Meter aqui las lista de prioridades
-				String [] posList = new String[4];
+				ArrayList <Integer> croqList = new ArrayList <Integer>();
+				ArrayList <String> posList = new ArrayList <String>();
 				
 				String line;
-				boolean procesar = false;
+
 				boolean loop = true;
 				try {
 					File dir = new File("./croquetasLog.txt");
@@ -194,20 +197,33 @@ public class Lanzadora {
 					FileReader fr = new FileReader(dir);
 					BufferedReader br = new BufferedReader(fr);
 					
-					
-					croqList= new int[] {
-							(Integer) spinJamon.getValue(),
-							(Integer) spinPollo.getValue(),
-							(Integer) spinBacalao.getValue(),
-							(Integer) spinQueso.getValue()
-							
-					}; 
-					
 					//Ordena croquetas
+					for(int i =1 ; i <= 4; i++) {
+						
+						if((Integer) spinJCola.getValue() == i) {
+							croqList.add((Integer) spinJamon.getValue());
+							posList.add("Jamon");
+						}
+						if((Integer) spinPCola.getValue() == i) {
+							croqList.add((Integer) spinPollo.getValue());
+							posList.add("Pollo");
+						}
+						if((Integer) spinBCola.getValue() == i) {
+							croqList.add((Integer) spinBacalao.getValue());
+							posList.add("Bacalao");
+						}
+						if((Integer) spinQCola.getValue() == i) {
+							croqList.add((Integer) spinQueso.getValue());
+							posList.add("Queso");
+						}
+						
+						
+						
+					}
 					
 					
 					
-					if(compCroquetas(croqList[0],croqList[1],croqList[2],croqList[3]) || procesar) {
+					if(compCroquetas(croqList.get(0),croqList.get(1),croqList.get(2),croqList.get(3))) {
 						
 					
 						execute(croqList,posList );
@@ -314,5 +330,13 @@ public class Lanzadora {
 		spinQCola.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		spinQCola.setBounds(491, 222, 46, 23);
 		frmFabricadorCroquetil.getContentPane().add(spinQCola);
+		
+		JLabel lblCroqNum = new JLabel("Numero De croquetas");
+		lblCroqNum.setBounds(371, 15, 106, 13);
+		frmFabricadorCroquetil.getContentPane().add(lblCroqNum);
+		
+		JLabel lblNewLabel = new JLabel("Orden");
+		lblNewLabel.setBounds(491, 15, 34, 13);
+		frmFabricadorCroquetil.getContentPane().add(lblNewLabel);
 	}
 }

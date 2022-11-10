@@ -112,7 +112,7 @@ public class Procesadora implements Runnable {
 		System.out.println("Fabricacion de croquetas finalizada");
 		System.out.println("0");
 		fin = System.currentTimeMillis();
-		System.out.println("Fabricacion finalizada tiempo tardado: " + (double) ((fin - inicio) / 1000) + " s");
+		System.out.println("Fabricacion finalizada tiempo tardado: " + (double) ((fin - inicio) / 1000.00) + " s");
 
 	}
 

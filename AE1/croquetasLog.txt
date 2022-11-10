@@ -1,16 +1,10 @@
 Iniciando procesadora
-Croqueta de jamon fabricada quedan :11
-Croqueta de jamon fabricada quedan :10
-Croqueta de jamon fabricada quedan :9
-Croqueta de jamon fabricada quedan :8
-Croqueta de jamon fabricada quedan :7
-Croqueta de jamon fabricada quedan :6
-Croqueta de bacalao fabricada quedan :5
-Croqueta de bacalao fabricada quedan :4
-Croqueta de bacalao fabricada quedan :3
-Croqueta de bacalao fabricada quedan :2
-Croqueta de bacalao fabricada quedan :1
-Croqueta de bacalao fabricada quedan :0
+Croqueta de Jamon fabricada quedan :5
+Croqueta de Jamon fabricada quedan :4
+Croqueta de Jamon fabricada quedan :3
+Croqueta de Jamon fabricada quedan :2
+Croqueta de Jamon fabricada quedan :1
+Croqueta de Jamon fabricada quedan :0
 Fabricacion de croquetas finalizada
 0
-Fabricacion finalizada tiempo tardado: 66.0 s
+Fabricacion finalizada tiempo tardado: 42.112 s
