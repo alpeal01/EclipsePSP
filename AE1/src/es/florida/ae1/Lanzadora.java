@@ -174,7 +174,9 @@ public class Lanzadora {
 		btnProcesar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int [] croqList = new int[4];
+//				Meter aqui las lista de prioridades
 				String [] posList = new String[4];
+				
 				String line;
 				boolean procesar = false;
 				boolean loop = true;
@@ -193,34 +195,15 @@ public class Lanzadora {
 					BufferedReader br = new BufferedReader(fr);
 					
 					
-//					croqList= new int[] {
-//							(Integer) spinJamon.getValue(),
-//							(Integer) spinPollo.getValue(),
-//							(Integer) spinBacalao.getValue(),
-//							(Integer) spinQueso.getValue()
-//							
-//					}; 
+					croqList= new int[] {
+							(Integer) spinJamon.getValue(),
+							(Integer) spinPollo.getValue(),
+							(Integer) spinBacalao.getValue(),
+							(Integer) spinQueso.getValue()
+							
+					}; 
 					
-					if((Integer)spinJCola.getValue() != (Integer)spinPCola.getValue() && 
-						(Integer)spinBCola.getValue() != (Integer)spinQCola.getValue() &&
-						(Integer)spinJCola.getValue() != (Integer)spinBCola.getValue() && 
-						(Integer)spinPCola.getValue() != (Integer)spinQCola.getValue()) 
-					{
-						
-						JOptionPane.showMessageDialog(null,"No pueden tener el misma Numero en la cola" , "InfoBox: " + "Poceso Finalizado", JOptionPane.INFORMATION_MESSAGE);
-						
-					}else {
-						procesar = true;
-						croqList[(Integer)spinJCola.getValue()] = (Integer) spinJamon.getValue();
-						croqList[(Integer)spinPCola.getValue()] = (Integer) spinPollo.getValue();
-						croqList[(Integer)spinBCola.getValue()] = (Integer) spinBacalao.getValue();
-						croqList[(Integer)spinQCola.getValue()] = (Integer) spinQueso.getValue();
-						
-						posList[(Integer)spinJCola.getValue()] = "Jamon";
-						posList[(Integer)spinPCola.getValue()] = "Pollo";
-						posList[(Integer)spinBCola.getValue()] = "Bacalao";
-						posList[(Integer)spinQCola.getValue()] = "Queso";
-					}
+					//Ordena croquetas
 					
 					
 					
