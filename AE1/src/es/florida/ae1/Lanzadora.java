@@ -29,6 +29,10 @@ public class Lanzadora {
 	private JSpinner spinQueso;
 	private JSpinner spinJamon;
 	JTextArea jtxState;
+	JSpinner spinQCola;
+	JSpinner spinBCola;
+	JSpinner spinPCola;
+	JSpinner spinJCola;
 	
 
 	/**
@@ -87,7 +91,7 @@ public class Lanzadora {
 		
 	}
 	
-	public void execute(int [] croqList) {
+	public void execute(int [] croqList, String [] orden) {
 		
 		String clase = "es.florida.ae1.Procesadora";
 
@@ -108,6 +112,10 @@ public class Lanzadora {
 			command.add(Integer.toString(croqList[1]));
 			command.add(Integer.toString(croqList[2]));
 			command.add(Integer.toString(croqList[3]));
+			command.add(orden[0]);
+			command.add(orden[1]);
+			command.add(orden[2]);
+			command.add(orden[3]);
 			
 			
 			ProcessBuilder builder = new ProcessBuilder(command);
@@ -165,8 +173,10 @@ public class Lanzadora {
 		JButton btnProcesar = new JButton("Procesar");
 		btnProcesar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int [] croqList;
+				int [] croqList = new int[4];
+				String [] posList = new String[4];
 				String line;
+				boolean procesar = false;
 				boolean loop = true;
 				try {
 					File dir = new File("./croquetasLog.txt");
@@ -182,19 +192,42 @@ public class Lanzadora {
 					FileReader fr = new FileReader(dir);
 					BufferedReader br = new BufferedReader(fr);
 					
-				
-					croqList= new int[] {
-							(Integer) spinJamon.getValue(),
-							(Integer) spinPollo.getValue(),
-							(Integer) spinBacalao.getValue(),
-							(Integer) spinQueso.getValue()
-							
-					}; 
 					
-					if(compCroquetas(croqList[0],croqList[1],croqList[2],croqList[3])) {
+//					croqList= new int[] {
+//							(Integer) spinJamon.getValue(),
+//							(Integer) spinPollo.getValue(),
+//							(Integer) spinBacalao.getValue(),
+//							(Integer) spinQueso.getValue()
+//							
+//					}; 
+					
+					if((Integer)spinJCola.getValue() != (Integer)spinPCola.getValue() && 
+						(Integer)spinBCola.getValue() != (Integer)spinQCola.getValue() &&
+						(Integer)spinJCola.getValue() != (Integer)spinBCola.getValue() && 
+						(Integer)spinPCola.getValue() != (Integer)spinQCola.getValue()) 
+					{
+						
+						JOptionPane.showMessageDialog(null,"No pueden tener el misma Numero en la cola" , "InfoBox: " + "Poceso Finalizado", JOptionPane.INFORMATION_MESSAGE);
+						
+					}else {
+						procesar = true;
+						croqList[(Integer)spinJCola.getValue()] = (Integer) spinJamon.getValue();
+						croqList[(Integer)spinPCola.getValue()] = (Integer) spinPollo.getValue();
+						croqList[(Integer)spinBCola.getValue()] = (Integer) spinBacalao.getValue();
+						croqList[(Integer)spinQCola.getValue()] = (Integer) spinQueso.getValue();
+						
+						posList[(Integer)spinJCola.getValue()] = "Jamon";
+						posList[(Integer)spinPCola.getValue()] = "Pollo";
+						posList[(Integer)spinBCola.getValue()] = "Bacalao";
+						posList[(Integer)spinQCola.getValue()] = "Queso";
+					}
+					
+					
+					
+					if(compCroquetas(croqList[0],croqList[1],croqList[2],croqList[3]) || procesar) {
 						
 					
-						execute(croqList);
+						execute(croqList,posList );
 						//Este entramado es para mostrar el log por interfaz
 						try {
 						Thread.sleep(3000);
@@ -274,5 +307,29 @@ public class Lanzadora {
 		jtxState.setFont(new Font("Monospaced", Font.PLAIN, 15));
 		jtxState.setBounds(10, 279, 370, 22);
 		frmFabricadorCroquetil.getContentPane().add(jtxState);
+		
+		spinJCola = new JSpinner();
+		spinJCola.setModel(new SpinnerNumberModel(1, 1, 4, 1));
+		spinJCola.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		spinJCola.setBounds(491, 38, 46, 23);
+		frmFabricadorCroquetil.getContentPane().add(spinJCola);
+		
+		spinPCola = new JSpinner();
+		spinPCola.setModel(new SpinnerNumberModel(1, 1, 4, 1));
+		spinPCola.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		spinPCola.setBounds(491, 96, 46, 23);
+		frmFabricadorCroquetil.getContentPane().add(spinPCola);
+		
+		spinBCola = new JSpinner();
+		spinBCola.setModel(new SpinnerNumberModel(1, 1, 4, 1));
+		spinBCola.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		spinBCola.setBounds(491, 151, 46, 23);
+		frmFabricadorCroquetil.getContentPane().add(spinBCola);
+		
+		spinQCola = new JSpinner();
+		spinQCola.setModel(new SpinnerNumberModel(1, 1, 4, 1));
+		spinQCola.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		spinQCola.setBounds(491, 222, 46, 23);
+		frmFabricadorCroquetil.getContentPane().add(spinQCola);
 	}
 }

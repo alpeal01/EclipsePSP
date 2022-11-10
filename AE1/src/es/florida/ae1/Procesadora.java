@@ -4,13 +4,16 @@ public class Procesadora implements Runnable {
 
 	static int[] lista;
 	static int totalCroq;
+	String [] lPriod; 
 	
 
-	public Procesadora(int cJamon, int cPollo, int cBacalao, int cQueso) {
+	public Procesadora(int croc1, int croc2, int croc3, int croc4 , String [] prioridad) {
 		super();
-		Procesadora.totalCroq = cJamon+cPollo+cBacalao+cQueso;
+		Procesadora.totalCroq = croc1+croc2+croc3+croc4;
 		
-		Procesadora.lista = new int[] { cJamon, cPollo, cBacalao, cQueso };
+		Procesadora.lista = new int[] { croc1, croc2, croc3, croc4 };
+		this.lPriod = prioridad;
+		
 	}
 
 	@Override
@@ -22,7 +25,7 @@ public class Procesadora implements Runnable {
 			if (Procesadora.lista[0] > 0) {
 				Procesadora.lista[0]--;
 				Procesadora.totalCroq--;
-				System.out.println("Croqueta de jamon fabricada quedan :" + Procesadora.totalCroq);
+				System.out.println("Croqueta de "+ lPriod[0]+ "fabricada quedan :" + Procesadora.totalCroq);
 				try {
 					Thread.sleep(5000);
 				} catch (InterruptedException e) {
@@ -35,7 +38,7 @@ public class Procesadora implements Runnable {
 			else if (Procesadora.lista[1] > 0) {
 				Procesadora.lista[1]--;
 				Procesadora.totalCroq--;
-				System.out.println("Croqueta de pollo fabricada quedan :" + Procesadora.totalCroq);
+				System.out.println("Croqueta de "+ lPriod[1]+ " fabricada quedan :" + Procesadora.totalCroq);
 				try {
 					Thread.sleep(6000);
 				} catch (InterruptedException e) {
@@ -48,7 +51,7 @@ public class Procesadora implements Runnable {
 			else if (Procesadora.lista[2] > 0) {
 				Procesadora.lista[2]--;
 				Procesadora.totalCroq--;
-				System.out.println("Croqueta de bacalao fabricada quedan :" + Procesadora.totalCroq);
+				System.out.println("Croqueta de "+ lPriod[2]+" fabricada quedan :" + Procesadora.totalCroq);
 				try {
 					Thread.sleep(7000);
 				} catch (InterruptedException e) {
@@ -61,7 +64,7 @@ public class Procesadora implements Runnable {
 			else if (Procesadora.lista[3] > 0) {
 				Procesadora.lista[3]--;
 				Procesadora.totalCroq--;
-				System.out.println("Croqueta de queso fabricada quedan :" + Procesadora.totalCroq);
+				System.out.println("Croqueta de "+ lPriod[3]+" fabricada quedan :" + Procesadora.totalCroq);
 				try {
 					Thread.sleep(8000);
 				} catch (InterruptedException e) {
@@ -83,10 +86,11 @@ public class Procesadora implements Runnable {
 		long fin;
 
 		int cont = Thread.activeCount();
-	
+		
+		String[] lista = new String[] {args[4],args[5],args[6],args[7]};
 		
 		Procesadora proc = new Procesadora(Integer.parseInt(args[0]), Integer.parseInt(args[1]),
-				Integer.parseInt(args[2]), Integer.parseInt(args[3]));
+				Integer.parseInt(args[2]), Integer.parseInt(args[3]),lista);
 		Thread hilo;
 
 		while (Procesadora.lista[0] != 0 || Procesadora.lista[1] != 0 || Procesadora.lista[2] != 0
