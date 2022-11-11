@@ -23,7 +23,7 @@ import javax.swing.JScrollPane;
 
 
 /**
- * @author Álvaro
+ * @author Alvaro
  *
  */
 public class Lanzadora {
@@ -44,6 +44,9 @@ public class Lanzadora {
 
 	/**
 	 * Launch the application.
+	 */
+	/**
+	 * @param args
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -113,7 +116,7 @@ public class Lanzadora {
 	
 	/**
 	 * Envia a la procesadora el numero y su lista de prioridad por multiproceso
-	 * y el resultado lo guarda en un archivo
+	 * y el resultado lo guarda en un archivo.
 	 * @param croqList lista de la cantidad de cada croqueta
 	 * @param orden el orden de prioridad
 	 */

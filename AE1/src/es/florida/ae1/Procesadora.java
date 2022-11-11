@@ -1,9 +1,9 @@
 package es.florida.ae1;
 
 /**
- * @author Álvaro
+ * @author Alvaro
  * 
- *
+ *La clase procesador procesa las conquetas pasando por argumentos su cantidad y el orden de prioridad;
  */
 public class Procesadora implements Runnable {
 
@@ -11,6 +11,13 @@ public class Procesadora implements Runnable {
 	static int totalCroq;
 	String[] lPriod;
 
+	/**
+	 * @param croc1 croqueta del primer lugar de prioridad
+	 * @param croc2 croqueta del segundo segundo de prioridad
+	 * @param croc3 croqueta del tercer lugar de prioridad
+	 * @param croc4 croqueta del cuartor lugar de prioridad
+	 * @param prioridad
+	 */
 	public Procesadora(int croc1, int croc2, int croc3, int croc4, String[] prioridad) {
 		super();
 		Procesadora.totalCroq = croc1 + croc2 + croc3 + croc4;

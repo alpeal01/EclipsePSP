@@ -1,19 +1,4 @@
 Iniciando procesadora
 Croqueta de Jamon fabricada quedan :5 en Total
-else
-else
 Croqueta de Jamon fabricada quedan :4 en Total
-else
-else
 Croqueta de Jamon fabricada quedan :3 en Total
-else
-Croqueta de Jamon fabricada quedan :2 en Total
-else
-else
-Croqueta de Jamon fabricada quedan :1 en Total
-else
-else
-Croqueta de Jamon fabricada quedan :0 en Total
-Fabricacion de croquetas finalizada
-0
-Fabricacion finalizada tiempo tardado: 27.082 s
