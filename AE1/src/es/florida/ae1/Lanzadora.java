@@ -19,8 +19,13 @@ import java.awt.event.ActionEvent;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
 
 
+/**
+ * @author Álvaro
+ *
+ */
 public class Lanzadora {
 
 	private JFrame frmFabricadorCroquetil;
@@ -33,6 +38,7 @@ public class Lanzadora {
 	JSpinner spinBCola;
 	JSpinner spinPCola;
 	JSpinner spinJCola;
+	private JScrollPane scrollPane;
 	
 	
 
@@ -54,6 +60,16 @@ public class Lanzadora {
 	
 
 
+	/**
+	 * Comprueba si la cantidad de todas la croqueta son exactas
+	 * a las pedidas
+	 * 
+	 * @param j croqueta 
+	 * @param p croqueta 
+	 * @param b	croqueta
+	 * @param q croqueta
+	 * @return True/False
+	 */
 	boolean compCroquetas(int j, int p,int b, int q){
 		
 		if(j % 6!= 0) {
@@ -95,6 +111,12 @@ public class Lanzadora {
 		
 	}
 	
+	/**
+	 * Envia a la procesadora el numero y su lista de prioridad por multiproceso
+	 * y el resultado lo guarda en un archivo
+	 * @param croqList lista de la cantidad de cada croqueta
+	 * @param orden el orden de prioridad
+	 */
 	public void execute(ArrayList <Integer> croqList, ArrayList <String> orden) {
 		
 		String clase = "es.florida.ae1.Procesadora";
@@ -150,7 +172,7 @@ public class Lanzadora {
 	private void initialize() {
 		frmFabricadorCroquetil = new JFrame();
 		frmFabricadorCroquetil.setTitle("Fabricador Croquetil");
-		frmFabricadorCroquetil.setBounds(100, 100, 627, 353);
+		frmFabricadorCroquetil.setBounds(100, 100, 628, 438);
 		frmFabricadorCroquetil.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmFabricadorCroquetil.getContentPane().setLayout(null);
 		
@@ -181,7 +203,7 @@ public class Lanzadora {
 				ArrayList <String> posList = new ArrayList <String>();
 				
 				String line;
-
+				
 				boolean loop = true;
 				try {
 					File dir = new File("./croquetasLog.txt");
@@ -229,9 +251,9 @@ public class Lanzadora {
 						execute(croqList,posList );
 						//Este entramado es para mostrar el log por interfaz
 						try {
-						Thread.sleep(3000);
+						
 						while(loop) {
-							Thread.sleep(5000);
+							Thread.sleep(1000);
 							line = br.readLine();
 							
 							if(line != null) {
@@ -242,7 +264,7 @@ public class Lanzadora {
 								else {
 								
 									System.out.println(line);
-									jtxState.setText(line);
+									jtxState.setText(jtxState.getText() + line+ "\n");
 								}
 							}
 							
@@ -301,11 +323,14 @@ public class Lanzadora {
 		spinJamon.setBounds(392, 38, 89, 23);
 		frmFabricadorCroquetil.getContentPane().add(spinJamon);
 		
+		scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 279, 370, 112);
+		frmFabricadorCroquetil.getContentPane().add(scrollPane);
+		
 		jtxState = new JTextArea();
+		scrollPane.setViewportView(jtxState);
 		jtxState.setText("Procesadora preparada...");
 		jtxState.setFont(new Font("Monospaced", Font.PLAIN, 15));
-		jtxState.setBounds(10, 279, 370, 22);
-		frmFabricadorCroquetil.getContentPane().add(jtxState);
 		
 		spinJCola = new JSpinner();
 		spinJCola.setModel(new SpinnerNumberModel(1, 1, 4, 1));
@@ -331,12 +356,17 @@ public class Lanzadora {
 		spinQCola.setBounds(491, 222, 46, 23);
 		frmFabricadorCroquetil.getContentPane().add(spinQCola);
 		
-		JLabel lblCroqNum = new JLabel("Numero De croquetas");
-		lblCroqNum.setBounds(371, 15, 106, 13);
+		JLabel lblCroqNum = new JLabel("Número de croquetas");
+		lblCroqNum.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		lblCroqNum.setBounds(377, 15, 122, 13);
 		frmFabricadorCroquetil.getContentPane().add(lblCroqNum);
 		
 		JLabel lblNewLabel = new JLabel("Orden");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		lblNewLabel.setBounds(491, 15, 34, 13);
 		frmFabricadorCroquetil.getContentPane().add(lblNewLabel);
+		
 	}
+	
+	
 }
