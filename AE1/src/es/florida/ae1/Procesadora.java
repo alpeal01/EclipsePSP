@@ -35,7 +35,7 @@ public class Procesadora implements Runnable {
 		// TODO Auto-generated method stub
 
 		synchronized (this) {
-
+		
 			if (Procesadora.lista[0] > 0) {
 				Procesadora.lista[0]--;
 				Procesadora.totalCroq--;
@@ -121,6 +121,7 @@ public class Procesadora implements Runnable {
 			if (cont <= 100) {
 				hilo = new Thread(proc);
 				hilo.start();
+			
 				
 			} else {
 				
