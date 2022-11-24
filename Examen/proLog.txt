@@ -1,0 +1,27 @@
+CC: numero de proteinas recicibido :24
+Proteina numero: 1 de tipo Beta relizado en un tiempo de 20 milisegundos
+Proteina numero: 2 de tipo Beta relizado en un tiempo de 30 milisegundos
+Proteina numero: 3 de tipo Alfa relizado en un tiempo de 30 milisegundos
+Proteina numero: 4 de tipo Alfa relizado en un tiempo de 10 milisegundos
+Proteina numero: 5 de tipo Beta relizado en un tiempo de 10 milisegundos
+Proteina numero: 6 de tipo Alfa relizado en un tiempo de 20 milisegundos
+Proteina numero: 7 de tipo Alfa relizado en un tiempo de 20 milisegundos
+Proteina numero: 8 de tipo Alfa relizado en un tiempo de 20 milisegundos
+Proteina numero: 9 de tipo Alfa relizado en un tiempo de 20 milisegundos
+Proteina numero: 10 de tipo Alfa relizado en un tiempo de 20 milisegundos
+Proteina numero: 11 de tipo Alfa relizado en un tiempo de 30 milisegundos
+Proteina numero: 12 de tipo Beta relizado en un tiempo de 20 milisegundos
+Proteina numero: 13 de tipo Alfa relizado en un tiempo de 20 milisegundos
+Proteina numero: 14 de tipo Beta relizado en un tiempo de 20 milisegundos
+Proteina numero: 15 de tipo Beta relizado en un tiempo de 10 milisegundos
+Proteina numero: 16 de tipo Gamma relizado en un tiempo de 30 milisegundos
+Proteina numero: 17 de tipo Gamma relizado en un tiempo de 30 milisegundos
+Proteina numero: 18 de tipo Beta relizado en un tiempo de 30 milisegundos
+Proteina numero: 19 de tipo Beta relizado en un tiempo de 30 milisegundos
+Proteina numero: 20 de tipo Gamma relizado en un tiempo de 20 milisegundos
+Proteina numero: 21 de tipo Gamma relizado en un tiempo de 30 milisegundos
+Proteina numero: 22 de tipo Gamma relizado en un tiempo de 10 milisegundos
+Proteina numero: 23 de tipo Beta relizado en un tiempo de 30 milisegundos
+Proteina numero: 24 de tipo Gamma relizado en un tiempo de 10 milisegundos
+Lista de proteina de :24
+0
