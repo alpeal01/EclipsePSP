@@ -10,6 +10,9 @@ import java.net.Socket;
 
 public class ClienteCalculo {
 	public static void main(String[] args) throws IOException {
+		
+		String clientName = args[3];
+		
 		System.out.println("CLIENTE >>> Arranca cliente");
 		System.out.println("CLIENTE >>> Conexion al servidor");
 		InetSocketAddress direccion = new InetSocketAddress("localhost", 9876);
@@ -21,9 +24,9 @@ public class ClienteCalculo {
 		BufferedReader bfr = new BufferedReader(isr);
 		System.out.println("CLIENTE >>> Envio de datos para el calculo");
 		PrintWriter pw = new PrintWriter(socket.getOutputStream());
-		pw.print("+\n");
-		pw.print("100\n");
-		pw.print("100\n");
+		pw.print(args[0]+"\n");
+		pw.print(args[1]+"\n");
+		pw.print(args[2]+"\n");
 		pw.flush();
 		String resultado = bfr.readLine();
 		System.out.println("CLIENTE >>> Recibe resultado: " + resultado);

@@ -10,38 +10,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ServidorCalculo {
-	public static int extraerNumero(String linea) {
-		int numero;
-		try {
-			numero = Integer.parseInt(linea);
-		} catch (NumberFormatException e) {
-			numero = 0;
-		}
-		if (numero >= 100000000) {
-			numero = 0;
-		}
-		return numero;
-	}
-
-	public static int calcular(String op, String n1, String n2) {
-		int resultado = 0;
-		char simbolo = op.charAt(0);
-		int num1 = extraerNumero(n1);
-		int num2 = extraerNumero(n2);
-		if (simbolo == '+') {
-			resultado = num1 + num2;
-		} else if (simbolo == '-') {
-			resultado = num1 - num2;
-		} else if (simbolo == '*') {
-			resultado = num1 * num2;
-		} else if (simbolo == '/') {
-			resultado = num1 / num2;
-		} else if (simbolo == '%') {
-			resultado = num1 % num2;
-		}
-
-		return resultado;
-	}
 
 	public static void main(String[] args) throws IOException {
 		System.err.println("SERVIDOR >>> Arranca el servidor, espera peticion");
@@ -54,24 +22,10 @@ public class ServidorCalculo {
 		}
 		while (true) {
 			Socket conexion = socketEscucha.accept();
-			System.err.println("SERVIDOR >>> Conexion recibida!");
-			InputStream is = conexion.getInputStream();
-			InputStreamReader isr = new InputStreamReader(is);
-			BufferedReader bf = new BufferedReader(isr);
-			System.err.println("SERVIDOR >>> Lee datos para la operacion");
-			String linea = bf.readLine();
-			String num1 = bf.readLine();
-			String num2 = bf.readLine();
-			System.err.println("SERVIDOR >>> Realiza la operacion");
-			Integer result = calcular(linea, num1, num2);
-			System.err.println("SERVIDOR >>> Devuelve resultado");
-			OutputStream os = conexion.getOutputStream();
-			PrintWriter pw = new PrintWriter(os);
-			pw.write(result.toString() + "\n");
-			pw.flush();
-			System.err.println("SERVIDOR >>> Espera nueva peticion");
-
+			System.err.println("SERVIDOR >>> Conexion recibida --> Lanza hilo clase Peticion");
+			Peticion p = new Peticion(conexion);
+			Thread hilo = new Thread(p);
+			hilo.start();
 		}
 	}
-
 }
