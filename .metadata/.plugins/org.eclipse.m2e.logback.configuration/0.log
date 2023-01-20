@@ -287,3 +287,151 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact http-server:h
 2023-01-20 17:17:09,022 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
 2023-01-20 17:17:09,024 [Worker-68: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2023-01-20 17:17:09,024 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:23:34,219 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-01-20 18:23:36,819 [Worker-8: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: AE3-S3RVR3D:AE3-S3RVR3D:0.0.1-SNAPSHOT @ C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\pom.xml.
+2023-01-20 18:23:37,099 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:23:37,101 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:23:37,105 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:23:37,106 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:23:38,026 [Worker-8: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: AE3-S3RVR3D:AE3-S3RVR3D:0.0.1-SNAPSHOT @ C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\pom.xml.
+2023-01-20 18:23:38,454 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:23:38,456 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:23:38,461 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:23:38,463 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:23:38,623 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:23:38,625 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:23:38,628 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:23:38,630 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:30:25,618 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-01-20 18:33:09,462 [Worker-5: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:33:09,465 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:33:09,469 [Worker-5: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:33:09,470 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:35:07,106 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:35:07,108 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:35:07,112 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:35:07,114 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:40:52,705 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:40:52,707 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:40:52,709 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:40:52,710 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:41:32,408 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:41:32,409 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:41:32,411 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:41:32,413 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:46:40,949 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:46:40,951 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:46:40,953 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:46:40,954 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:47:04,295 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:47:04,296 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:47:04,299 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:47:04,301 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:49:50,358 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:49:50,358 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:49:50,361 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:49:50,362 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:49:58,962 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:49:58,963 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:49:58,966 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:49:58,967 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:50:04,919 [Worker-34: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:50:04,920 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:50:04,923 [Worker-34: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:50:04,924 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:50:17,184 [Worker-34: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:50:17,185 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:50:17,188 [Worker-34: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:50:17,190 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:56:28,782 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:56:28,783 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:56:28,785 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:56:28,786 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:59:41,844 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:59:41,845 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 18:59:41,847 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 18:59:41,848 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:10:16,785 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:10:16,786 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:10:16,789 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:10:16,792 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:25:04,336 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:25:04,337 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:25:04,341 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:25:04,342 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:25:22,403 [Worker-42: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:25:22,404 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:25:22,406 [Worker-42: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:25:22,407 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:25:36,325 [Worker-42: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:25:36,327 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:25:36,330 [Worker-42: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:25:36,331 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:26:33,695 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:26:33,696 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:26:33,699 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:26:33,700 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:27:02,037 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:27:02,038 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:27:02,040 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:27:02,042 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:28:52,808 [Worker-43: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:28:52,809 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:28:52,826 [Worker-43: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:28:52,827 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:32:16,431 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:32:16,432 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:32:16,434 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:32:16,434 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:32:35,016 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:32:35,017 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:32:35,020 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:32:35,021 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:35:11,478 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:35:11,479 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:35:11,482 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:35:11,484 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:35:42,476 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:35:42,477 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:35:42,480 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:35:42,481 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:35:56,945 [Worker-46: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:35:56,946 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:35:56,947 [Worker-46: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:35:56,948 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:36:42,568 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:36:42,569 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:36:42,572 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:36:42,573 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:36:58,218 [Worker-46: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:36:58,219 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:36:58,222 [Worker-46: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:36:58,224 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:42:21,344 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:42:21,345 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:42:21,347 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:42:21,349 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:42:41,752 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:42:41,753 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:42:41,756 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:42:41,756 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:45:56,490 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:45:56,491 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:45:56,494 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:45:56,515 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:46:03,832 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:46:03,833 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:46:03,835 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:46:03,836 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 19:46:37,554 [Worker-49: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:46:37,555 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 19:46:37,557 [Worker-49: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 19:46:37,558 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 20:01:55,038 [Worker-53: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 20:01:55,039 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 20:01:55,043 [Worker-53: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 20:01:55,044 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 20:02:12,941 [Worker-52: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 20:02:12,942 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 20:02:12,945 [Worker-52: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 20:02:12,946 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources

@@ -1,0 +1,12 @@
+{
+  "alias" : "El asesino de la Katana",
+  "nombreCompleto" : "José Rabadán Pardo",
+  "fechaNacimiento" : 1983,
+  "nacionalidad" : "Murciano",
+},
+{
+  "alias" : "El peluca",
+  "nombreCompleto" : Carles Puigdemont",
+  "fechaNacimiento" : 1962,
+  "nacionalidad" : "Catalán",
+}
