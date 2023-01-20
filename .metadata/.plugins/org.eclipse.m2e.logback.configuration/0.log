@@ -55,3 +55,41 @@
 2022-12-09 15:20:12,294 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
 2022-12-09 16:24:22,510 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2022-12-15 10:40:04,399 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-01-20 15:40:05,767 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-01-20 15:54:03,103 [Worker-23: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: AE3-S3RVR3D:AE3-S3RVR3D:0.0.1-SNAPSHOT @ C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\pom.xml.
+2023-01-20 15:54:05,570 [Worker-26: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 15:54:05,571 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 15:54:05,585 [Worker-26: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 15:54:05,589 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 15:54:05,817 [Worker-23: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /AE3-S3RVR3D/src
+2023-01-20 15:54:05,818 [Worker-23: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /AE3-S3RVR3D/src/test/java because it overlaps with /AE3-S3RVR3D/src
+2023-01-20 15:54:05,914 [Worker-23: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-01-20 15:54:06,158 [Worker-23: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: AE3-S3RVR3D:AE3-S3RVR3D:0.0.1-SNAPSHOT @ C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\pom.xml.
+2023-01-20 15:54:06,301 [Worker-23: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /AE3-S3RVR3D/src
+2023-01-20 15:54:06,302 [Worker-23: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /AE3-S3RVR3D/src/test/java because it overlaps with /AE3-S3RVR3D/src
+2023-01-20 15:54:06,342 [Worker-23: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2023-01-20 15:54:06,472 [Worker-26: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 15:54:06,473 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 15:54:06,475 [Worker-26: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 15:54:06,476 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 15:54:34,565 [Worker-24: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: AE3-S3RVR3D:AE3-S3RVR3D:0.0.1-SNAPSHOT @ C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\pom.xml.
+2023-01-20 15:54:34,803 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 15:54:34,804 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 15:54:34,807 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 15:54:34,808 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 15:54:36,020 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 15:54:36,020 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 15:54:36,022 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 15:54:36,023 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 15:55:20,210 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 15:55:20,211 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 15:55:20,213 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 15:55:20,215 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 15:56:13,871 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 15:56:13,872 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 15:56:13,874 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 15:56:13,875 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 15:56:55,721 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 15:56:55,723 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
+2023-01-20 15:56:55,726 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-01-20 15:56:55,727 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
