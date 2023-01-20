@@ -3,7 +3,7 @@ package es.florida.servred;
 import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
-import com.sun.net.httpserver.HttpServer;
+import com.sun.net.httpserver.*;
 
 public class ServidorHTTP {
 	public static void main(String[] args) throws Exception {
@@ -14,9 +14,9 @@ public class ServidorHTTP {
 		HttpServer servidor = HttpServer.create(direccionTCPIP, backlog);
 		GestorHTTP gestorHTTP = new GestorHTTP();
 		String rutaRespuesta = "/test";
-		servidor.createContext(rutaRespuesta);
+		servidor.createContext(rutaRespuesta, gestorHTTP);
 
-//Opcion 2 de ejecucion: multihilo con ThreadPoolExecutor
+//multihilo con ThreadPoolExecutor
 		ThreadPoolExecutor threadPoolExecutor = (ThreadPoolExecutor) Executors.newFixedThreadPool(10);
 		servidor.setExecutor(threadPoolExecutor);
 		servidor.start();
