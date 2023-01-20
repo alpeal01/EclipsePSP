@@ -2,11 +2,13 @@
 <section name="Workbench">
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="AE3-S3RVR3D"/>
 			<item value="Tema5-GSR"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="AE3-S3RVR3D"/>
 			<item value="Tema5-GSR"/>
 		</list>
 		<list key="version">
