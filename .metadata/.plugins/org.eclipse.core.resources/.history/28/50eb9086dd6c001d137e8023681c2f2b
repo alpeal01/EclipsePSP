@@ -1,0 +1,47 @@
+package es.florida.t4PCR;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class GestorDescargas {
+	
+	public void descargarArchivo(String url_descargar, String nombreArchivo) {
+		System.out.println(" Descargando " + url_descargar);
+		try {
+			URL laUrl = new URL(url_descargar);
+			InputStream is = laUrl.openStream();
+			InputStreamReader reader = new InputStreamReader(is);
+			
+			FileOutputStream escritorFichero = new FileOutputStream(nombreArchivo);
+			int i = 0;
+			byte[] caracter = new byte [9999999];
+			
+			while ((caracter[i] = (byte) reader.read()) != -1) {i++;}
+			
+			escritorFichero.write(caracter);
+			escritorFichero.close();
+			reader.close();
+			is.close();
+		} catch (MalformedURLException e) {
+			System.out.println("URL mal escrita!");
+		} catch (IOException e) {
+			System.out.println("Fallo en la lectura del fichero");
+		}
+	}
+	
+	public static void main (String[] args){
+		GestorDescargas gd=new GestorDescargas();
+		String url =
+		"http://localhost:80"+
+		"/dashboard/capybara.jpg";
+		String fichero = "capybara.jpg";
+		gd.descargarArchivo(url,fichero);
+		}
+		
+	
+	
+}

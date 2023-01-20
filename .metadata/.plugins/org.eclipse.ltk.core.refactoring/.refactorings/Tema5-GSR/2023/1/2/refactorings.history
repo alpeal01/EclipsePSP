@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;es.florida.t5.envioMail&apos; to &apos;mail&apos;&#x0D;&#x0A;- Original project: &apos;Tema5-GSR&apos;&#x0D;&#x0A;- Original element: &apos;es.florida.t5.envioMail&apos;&#x0D;&#x0A;- Renamed element: &apos;es.florida.t5.mail&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;envioMail&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src=/optional=/true=/=/maven.pomderived=/true=/&lt;es.florida.t5{envioMail.java[envioMail" matchStrategy="1" name="mail" qualified="false" references="true" similarDeclarations="false" stamp="1673626244449" textual="false" version="1.0"/>
+</session>

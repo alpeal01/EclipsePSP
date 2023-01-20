@@ -1,0 +1,48 @@
+package es.florida.t4PCR;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class ServidorLib {
+	
+	String titulo;
+	String autor;
+	
+	public ServidorLib(String titulo, String autor) {
+		super();
+		this.titulo = titulo;
+		this.autor = autor;
+	}
+
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+
+	public String getAutor() {
+		return autor;
+	}
+
+	public static void main(String[] arg) throws IOException, ClassNotFoundException {
+		int numeroPuerto = 1234;
+		ServerSocket servidor = new ServerSocket(numeroPuerto);
+		System.err.println("SERVIDOR >> Escuchando...");
+		Socket cliente = servidor.accept();
+		ObjectOutputStream outObjeto = new ObjectOutputStream(cliente.getOutputStream());
+		
+		ServidorLib pMod = (ServidorLib) inObjeto.readObject();
+		System.err.println("SERVIDOR >> Recibo de cliente: " + pMod.getNombre()+ " - " +
+		pMod.getEdad());
+		
+		
+		outObjeto.close();
+		inObjeto.close ();
+		cliente.close ();
+		servidor.close();
+		} 
+
+}

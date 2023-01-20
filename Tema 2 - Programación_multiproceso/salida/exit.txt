@@ -1,2 +1,0 @@
-Sumando de 2 hasta 10
-54

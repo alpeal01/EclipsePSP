@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;es.florida.t4PCR.clienteLib&apos; to &apos;ClienteLib&apos;&#x0D;&#x0A;- Original project: &apos;Tema4-PCR&apos;&#x0D;&#x0A;- Original element: &apos;es.florida.t4PCR.clienteLib&apos;&#x0D;&#x0A;- Renamed element: &apos;es.florida.t4PCR.ClienteLib&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;clienteLib&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;es.florida.t4PCR{clienteLib.java[clienteLib" matchStrategy="1" name="ClienteLib" qualified="false" references="true" similarDeclarations="false" stamp="1669990816589" textual="false" version="1.0"/>
+</session>

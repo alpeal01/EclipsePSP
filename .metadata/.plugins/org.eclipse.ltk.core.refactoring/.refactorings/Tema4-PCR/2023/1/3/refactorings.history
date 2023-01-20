@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;ServidorHTTP.java&apos; to &apos;AE3-S3RVR3D/src&apos;&#x0D;&#x0A;- Original project: &apos;Tema4-PCR&apos;&#x0D;&#x0A;- Destination element: &apos;AE3-S3RVR3D/src&apos;&#x0D;&#x0A;- Original element: &apos;es.florida.t4PCR.ServidorHTTP.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=AE3-S3RVR3D/src" element1="/src&lt;es.florida.t4PCR{ServidorHTTP.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1674226413576" units="1" version="1.0"/>
+</session>
