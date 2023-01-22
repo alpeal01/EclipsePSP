@@ -6,6 +6,22 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Iterator;
+import java.util.Properties;
+
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -16,6 +32,47 @@ import com.sun.net.httpserver.*;
 
 public class GestorHTTP implements HttpHandler {
 
+	@SuppressWarnings("unused")
+	private void enviarMail (String mensaje, String asunto, String email_remitente, String email_remitente_pass, 
+			String host_email, String port_email, String[] email_destino, String[] anexo) throws AddressException, MessagingException {
+		
+		Properties props = System.getProperties();
+		
+		props.put("mail.smtp.host", host_email); 
+		props.put("mail.smtp.user", email_remitente);
+		props.put("mail.smtp.clave", email_remitente_pass); 
+		props.put("mail.smtp.auth", "true"); 
+		props.put("mail.smtp.starttls.enable", "true"); 
+		props.put("mail.smtp.port", port_email); 
+		
+		Session session = Session.getDefaultInstance(props);
+		
+		MimeMessage message = new MimeMessage(session);
+		message.setFrom(new InternetAddress(email_remitente));
+		message.addRecipients(Message.RecipientType.TO, email_destino[0]);
+		message.setSubject(asunto);
+		
+		BodyPart messageBodyPart1 = new MimeBodyPart();
+		messageBodyPart1.setText(mensaje);
+		
+		BodyPart messageBodyPart2 = new MimeBodyPart();
+		DataSource src= new FileDataSource(anexo[0]);
+		messageBodyPart2.setDataHandler(new DataHandler(src));
+		messageBodyPart2.setFileName(anexo[0]);
+		
+		Multipart multipart = new MimeMultipart(); 
+		multipart.addBodyPart(messageBodyPart1);
+		multipart.addBodyPart(messageBodyPart2); 
+		
+		message.setContent(multipart);
+		
+		Transport transport = session.getTransport("smtp");
+		transport.connect(host_email, email_remitente, email_remitente_pass);
+		transport.sendMessage(message, message.getAllRecipients());
+		transport.close();
+
+	}
+	
 	private String handleGetRequest(HttpExchange httpExchange) {
 
 		if (httpExchange.getRequestURI().toString().lastIndexOf("?") != -1
@@ -38,12 +95,12 @@ public class GestorHTTP implements HttpHandler {
 		String htmlResponse = "";
 		if (requestParamValue.equals("mostrarTodos")) {
 			//mostrar lista de delincuentes 
-			htmlResponse = "<html><body>" + mostrarTodos() + "</body></html>";
+			htmlResponse = "<html><Head><H1>Lista de Delincuentes: </H1><body>" + mostrarTodos() + "</body></html>";
 			
 		}else if(requestParamValue.contains("alias")) {
 			
 			//mostrar datos de un delincuente
-			htmlResponse = "<html><body>" + delincuente(requestParamValue.split(",")[1]) + "</body></html>";
+			htmlResponse = "<html><Head><H1>Datos del Delincuente: </H1><body>" + delincuente(requestParamValue.split(",")[1]) + "</body></html>";
 		}
 		
 		else {
@@ -115,13 +172,9 @@ public class GestorHTTP implements HttpHandler {
 				for (int i = 0; i < delincuentes.size(); i++) {
 					
 					JSONObject delincuente =  (JSONObject) delincuentes.get(i);
-					list += "<p>"+delincuente.get("alias")+"</p>";
-					
-					
-					
-				}
+					list += "<p>"+delincuente.get("alias")+"</p>";	
+				} 
 				
-				  
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
