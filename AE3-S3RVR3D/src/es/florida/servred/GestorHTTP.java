@@ -85,6 +85,11 @@ public class GestorHTTP implements HttpHandler {
 			return httpExchange.getRequestURI().toString().split("/")[2];
 
 		}
+		else if (httpExchange.getRequestURI().toString().lastIndexOf("nuevo") != -1) {
+
+			return httpExchange.getRequestURI().toString().split("/")[2];
+
+		}
 		return "error";
 
 	}
@@ -100,7 +105,22 @@ public class GestorHTTP implements HttpHandler {
 		}else if(requestParamValue.contains("alias")) {
 			
 			//mostrar datos de un delincuente
-			htmlResponse = "<html><Head><H1>Datos del Delincuente: </H1><body>" + delincuente(requestParamValue.split(",")[1]) + "</body></html>";
+			htmlResponse = "<html><Head><H1>Crear un delincuente: </H1><body>" + delincuente(requestParamValue.split(",")[1]) + "</body></html>";
+		}
+		else if(requestParamValue.equals("nuevo")) {
+			
+			
+			//crear un nuevo delincuente
+			htmlResponse = "<html><Head><H1>Lista de Delincuentes: </H1><body>" + "<form name=\"createDelincuente\" method=\"post\" action=\"mostrarTodos\">\r\n"
+					+ "Alias: <input type=\"text\" name=\"alias\"/> <br/>"
+					+ "nombreCompleto: <input type=\"text\" name=\"nombreCompleto\"/> <br/>"
+					+ "fechaNacimiento: <input type=\"text\" name=\"fechaNacimiento\"/> <br/>"
+					+ "nacionalidad: <input type=\"text\" name=\"nacionalidad\"/> <br/>"
+					+"<input type=\"file\" accept=\"image/*\" /><br/>"
+					+"<input type=\"submit\" value=\"Crear\" />\r\n"
+					+ "</form>";
+					
+			
 		}
 		
 		else {
@@ -147,7 +167,9 @@ public class GestorHTTP implements HttpHandler {
 			handleGETResponse(httpExchange, requestParamValue);
 
 		} else if ("POST".equals(httpExchange.getRequestMethod())) {
-
+			
+			System.out.println("Posteo");
+			
 			requestParamValue = handlePostRequest(httpExchange);
 
 			handlePOSTResponse(httpExchange, requestParamValue);
