@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="handleGetRequest"/>
+		<item key="selection" value="Syste"/>
 		<list key="findhistory">
+			<item value="syste"/>
 			<item value="handleGetRequest"/>
 			<item value="handleGETResponse"/>
 			<item value="test"/>

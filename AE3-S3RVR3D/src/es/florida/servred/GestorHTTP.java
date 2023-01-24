@@ -1,12 +1,16 @@
 package es.florida.servred;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 import java.util.Properties;
+import java.util.stream.Collectors;
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
@@ -116,7 +120,7 @@ public class GestorHTTP implements HttpHandler {
 					+ "nombreCompleto: <input type=\"text\" name=\"nombreCompleto\"/> <br/>"
 					+ "fechaNacimiento: <input type=\"text\" name=\"fechaNacimiento\"/> <br/>"
 					+ "nacionalidad: <input type=\"text\" name=\"nacionalidad\"/> <br/>"
-					+"<input type=\"file\" accept=\"image/*\" /><br/>"
+					+"<input type=\"file\" accept=\"image/*\" name=\"photo\" /><br/>"
 					+"<input type=\"submit\" value=\"Crear\" />\r\n"
 					+ "</form>";
 					
@@ -139,12 +143,27 @@ public class GestorHTTP implements HttpHandler {
 		InputStream inputStream = httpExchange.getRequestBody();
 		// Procesar lo que hay en inputStream, por ejemplo linea a linea y guardarlo
 		// todo en un string, que sera el que devuelve el metodo
-		String postRequest = "";
+		
+		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+
+		String postRequest="";
+		
+	
+			      try {
+					postRequest = reader.readLine();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		
+		
+		System.out.println("->>"+postRequest);
 
 		return postRequest;
 	}
 
 	private void handlePOSTResponse(HttpExchange httpExchange, String requestParamValue) throws IOException {
+		System.out.println(requestParamValue);
 		OutputStream outputStream = httpExchange.getResponseBody();
 		String htmlResponse = "Respuesta a la petición POST";
 		httpExchange.sendResponseHeaders(200, htmlResponse.length());
@@ -269,6 +288,15 @@ public class GestorHTTP implements HttpHandler {
 		
 	
 		return datos;
+		
+	}
+	
+	void guardarDelincuente(String requestParamValue) {
+		
+		System.out.println(requestParamValue);
+		
+		
+		
 		
 	}
 	
