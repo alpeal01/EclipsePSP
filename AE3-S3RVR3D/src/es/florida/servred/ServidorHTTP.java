@@ -13,10 +13,10 @@ public class ServidorHTTP {
 		int backlog = 0;
 		HttpServer servidor = HttpServer.create(direccionTCPIP, backlog);
 		GestorHTTP gestorHTTP = new GestorHTTP();
-		String rutaRespuesta = "/test";
+		String rutaRespuesta = "/servidor";
 		servidor.createContext(rutaRespuesta, gestorHTTP);
 
-//multihilo con ThreadPoolExecutor
+		//multihilo con ThreadPoolExecutor
 		ThreadPoolExecutor threadPoolExecutor = (ThreadPoolExecutor) Executors.newFixedThreadPool(10);
 		servidor.setExecutor(threadPoolExecutor);
 		servidor.start();
