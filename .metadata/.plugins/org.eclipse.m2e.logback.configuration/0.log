@@ -287,6 +287,9 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact http-server:h
 2023-01-20 17:17:09,022 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
 2023-01-20 17:17:09,024 [Worker-68: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2023-01-20 17:17:09,024 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+<<<<<<< HEAD
+2023-01-20 18:32:40,867 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+=======
 2023-01-20 18:23:34,219 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2023-01-20 18:23:36,819 [Worker-8: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: AE3-S3RVR3D:AE3-S3RVR3D:0.0.1-SNAPSHOT @ C:\Users\hesalu\Desktop\EclipsePSP\AE3-S3RVR3D\pom.xml.
 2023-01-20 18:23:37,099 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
@@ -1429,5 +1432,9 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact http-server:h
 2023-01-25 11:41:20,124 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Alvaro\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
 2023-01-25 11:41:20,124 [Worker-77: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2023-01-25 11:41:20,125 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Alvaro\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+<<<<<<< HEAD
 2023-01-25 12:04:38,065 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2023-01-25 12:05:16,801 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+=======
+>>>>>>> 9b9c075bcd845a7dcb12fa8615c46ba5326c1e64
+>>>>>>> a00e1f217234e3eb6d3fbfe727d6e39c3f6b1154
