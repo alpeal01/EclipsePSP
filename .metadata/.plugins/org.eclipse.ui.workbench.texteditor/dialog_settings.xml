@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Syste"/>
+		<item key="selection" value="Crear un delincuente"/>
 		<list key="findhistory">
+			<item value="Crear un delincuente"/>
+			<item value="System.out.println"/>
 			<item value="syste"/>
 			<item value="handleGetRequest"/>
 			<item value="handleGETResponse"/>

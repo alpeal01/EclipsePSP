@@ -1,0 +1,18 @@
+{ "delincuentes":[  {
+  "alias" : "El asesino de la Katana",
+  "nombreCompleto" : "José Rabadan Pardo",
+  "fechaNacimiento" : 1983,
+  "nacionalidad" : "Murciano"
+},
+{
+  "alias" : "El peluca",
+  "nombreCompleto" : "Carles Puigdemont",
+  "fechaNacimiento" : 1962,
+  "nacionalidad" : "Catalan"
+},{
+  "alias" : "M.Rajoy",
+  "nombreCompleto" : "Desconocido",
+  "fechaNacimiento" : 1955 ,
+  "nacionalidad" : "Espanyola"
+}
+]}
