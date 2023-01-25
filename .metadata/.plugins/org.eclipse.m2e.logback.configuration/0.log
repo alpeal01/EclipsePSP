@@ -287,3 +287,4 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact http-server:h
 2023-01-20 17:17:09,022 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\main\resources
 2023-01-20 17:17:09,024 [Worker-68: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2023-01-20 17:17:09,024 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alvar\Desktop\EclipsePSP\AE3-S3RVR3D\src\test\resources
+2023-01-20 18:32:40,867 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
