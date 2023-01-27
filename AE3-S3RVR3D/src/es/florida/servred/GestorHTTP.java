@@ -125,8 +125,8 @@ public class GestorHTTP implements HttpHandler {
 					+ "Alias: <input type=\"text\" name=\"alias\"/> <br/>"
 					+ "nombreCompleto: <input type=\"text\" name=\"nombreCompleto\"/> <br/>"
 					+ "fechaNacimiento: <input type=\"text\" name=\"fechaNacimiento\"/> <br/>"
-					+ "nacionalidad: <input type=\"text\" name=\"nacionalidad\"/> <br/>" + "<input type=\"file\"\r\n"
-					+ "id=\"img\" name=\"imagen\"\r\n" + "accept=\"image/png, image/jpeg\"><br/>"
+					+ "nacionalidad: <input type=\"text\" name=\"nacionalidad\"/> <br/>"
+					+ "imagen en base64: <input type=\"text\" name=\"imagen\"/> <br/>"
 					+ "<input type=\"submit\" value=\"Crear\" />\r\n" + "</form>";
 
 		}
@@ -252,13 +252,13 @@ public class GestorHTTP implements HttpHandler {
 				JSONObject delincuente = (JSONObject) delincuentes.get(i);
 
 				if (delincuente.get("alias").equals(alias)) {
-					
 
 					datos += "<p> Alias: " + delincuente.get("alias") + "</p>";
 					datos += "<p> Nombre: " + delincuente.get("nombreCompleto") + "</p>";
 					datos += "<p>Fecha de nacimiento: " + delincuente.get("fechaNacimiento") + "</p>";
 					datos += "<p> Nacionalidad: " + delincuente.get("nacionalidad") + "</p>";
-					datos += "<p> <img src=\"data:image/png;base64, "+ delincuente.get("imagen")+"\" alt=\"Foto del delinecuente\" /> </p>";
+					datos += "<p> <img src=\"data:image/png;base64, " + delincuente.get("imagen")
+							+ "\" alt=\"Foto del delinecuente\" /> </p>";
 
 					return datos;
 
@@ -286,13 +286,8 @@ public class GestorHTTP implements HttpHandler {
 		String[] list = requestParamValue.split("&");
 		System.out.println(Arrays.toString(list));
 		// meter la imagen a subir en la carpeta images
-		String photo = ("./images/" + list[4].split("=")[1]);
-
 		byte[] fileContent;
-		try {
-			fileContent = FileUtils.readFileToByteArray(new File(photo));
-			// string con la imagen en base64
-			String encodedString = Base64.getEncoder().encodeToString(fileContent);
+		try {			
 
 			JSONParser parser = new JSONParser();
 
@@ -305,18 +300,17 @@ public class GestorHTTP implements HttpHandler {
 				JSONObject newDel = new JSONObject();
 
 				for (int i = 0; i < list.length; i++) {
+
 					String[] line = list[i].split("=");
-					if (i == list.length - 1) {
 
-						newDel.put(line[0], encodedString);
+					if (line[1].contains("+")) {
 
-					} else {
-						if (line[1].contains("+")) {
-							line[1] = line[1].replace("+"," ");
-							newDel.put(line[0], line[1]);
-						}
-						else newDel.put(line[0], line[1]);
-					}
+						line[1] = line[1].replace("+", " ");
+						newDel.put(line[0], line[1]);
+
+					} else
+						newDel.put(line[0], line[1]);
+
 				}
 				delincuentes.add(newDel);
 
@@ -341,7 +335,7 @@ public class GestorHTTP implements HttpHandler {
 				e.printStackTrace();
 			}
 
-		} catch (IOException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

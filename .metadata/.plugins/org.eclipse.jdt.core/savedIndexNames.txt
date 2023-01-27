@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.131+C:\Users\alvar\Desktop\EclipsePSP\.metadata\.plugins\org.eclipse.jdt.core
 2394554402.index
 1865797976.index
@@ -14,3 +15,21 @@ INDEX VERSION 1.131+C:\Users\alvar\Desktop\EclipsePSP\.metadata\.plugins\org.ecl
 1919195326.index
 2654697412.index
 63650895.index
+=======
+INDEX VERSION 1.131+C:\Users\Alvaro\Desktop\EclipsePSP\.metadata\.plugins\org.eclipse.jdt.core
+3574303815.index
+2394554402.index
+3421848528.index
+3691968547.index
+1919195326.index
+3991927662.index
+3937020612.index
+2654697412.index
+2535051253.index
+2396238077.index
+1865797976.index
+3257227184.index
+4097179668.index
+219624331.index
+2822107357.index
+>>>>>>> bcc9480e8be75eed071b6e36792f5e5647711a21
