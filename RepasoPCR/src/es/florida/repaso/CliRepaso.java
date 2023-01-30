@@ -20,33 +20,33 @@ public class CliRepaso {
 		Socket socket = new Socket();
 		socket.connect(direccion);
 		
-//		System.out.println("CLIENTE >>> Preparado canal para recibir resultado");
-//		InputStream is = socket.getInputStream();
-//		InputStreamReader isr = new InputStreamReader(is);
-//		BufferedReader bfr = new BufferedReader(isr);
+		System.out.println("CLIENTE >>> Preparado canal para recibir resultado");
+		InputStream is = socket.getInputStream();
+		InputStreamReader isr = new InputStreamReader(is);
+		BufferedReader bfr = new BufferedReader(isr);
+		
+		System.out.println("CLIENTE >>> Envio de datos");
+		PrintWriter pw = new PrintWriter(socket.getOutputStream());
+		pw.print("Que tal\n");
+		pw.flush();
+		
+		String resultado = bfr.readLine();
+		
+		System.out.println("CLIENTE >>> Recibe respuesta: " + resultado);
+//		ObjectInputStream inObj = new ObjectInputStream(socket.getInputStream());
+//		ObjectOutputStream outObj = new ObjectOutputStream(socket.getOutputStream());
+//		Persona p = new Persona("JoseJuan", 24);
 //		
-//		System.out.println("CLIENTE >>> Envio de datos");
-//		PrintWriter pw = new PrintWriter(socket.getOutputStream());
-//		pw.print("Que tal\n");
-//		pw.flush();
+//		outObj.writeObject(p);
 //		
-//		String resultado = bfr.readLine();
+//		System.out.println("CLiente envia persona: "+p.getNombre());
 //		
-//		System.out.println("CLIENTE >>> Recibe respuesta: " + resultado);
-		ObjectInputStream inObj = new ObjectInputStream(socket.getInputStream());
-		ObjectOutputStream outObj = new ObjectOutputStream(socket.getOutputStream());
-		Persona p = new Persona("JoseJuan", 24);
-		
-		outObj.writeObject(p);
-		
-		System.out.println("CLiente envia persona: "+p.getNombre());
-		
-		p =  (Persona) inObj.readObject();
-		
-		System.out.println("Cliente recive nueva persona: "+ p.getNombre());
-		outObj.close();
-		inObj.close();
-		
+//		p =  (Persona) inObj.readObject();
+//		
+//		System.out.println("Cliente recive nueva persona: "+ p.getNombre());
+//		outObj.close();
+//		inObj.close();
+//		
 
 	}
 
