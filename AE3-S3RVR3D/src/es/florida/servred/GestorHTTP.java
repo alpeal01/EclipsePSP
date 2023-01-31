@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -44,39 +45,36 @@ import com.sun.net.httpserver.*;
 
 public class GestorHTTP implements HttpHandler {
 
-	private void enviarMail(String mensaje, String asunto, String email_remitente, String email_destino, String pass)
-			throws AddressException, MessagingException {
+	private void enviarMail(String mensaje, String asunto, String email_remitente, String email_remitente_pass,
+			String host_email, String port_email, String[] email_destino, String[] anexo) throws
+	UnsupportedEncodingException, MessagingException {
 
-		// using host as localhost
-		String host = "127.0.0.1";
-
-		Properties properties = System.getProperties();
-
-		properties.setProperty("mail.smtp.host", host);
-
-		Session session = Session.getDefaultInstance(properties);
-
-		try {
-			MimeMessage message = new MimeMessage(session);
-
-			message.setFrom(new InternetAddress(email_remitente));
-
-			message.addRecipient(Message.RecipientType.TO, new InternetAddress(email_destino));
-
-			message.setSubject(asunto);
-
-			message.setText(mensaje);
-
-			Transport transport = session.getTransport("smtp");
-			transport.connect(host, email_remitente, pass);
-			transport.sendMessage(message, message.getAllRecipients());
-			transport.close();
-
-
-			System.out.println("Mail successfully sent");
-		} catch (MessagingException mex) {
-			mex.printStackTrace();
-		}
+		Properties props = System.getProperties();
+		props.put("mail.smtp.host", host_email);
+		props.put("mail.smtp.user", email_remitente);
+		props.put("mail.smtp.clave", email_remitente_pass);
+		props.put("mail.smtp.auth", "true");
+		props.put("mail.smtp.starttls.enable", "true");
+		props.put("mail.smtp.port", port_email);
+		Session session = Session.getDefaultInstance(props);
+		MimeMessage message = new MimeMessage(session);
+		message.setFrom(new InternetAddress(email_remitente));
+		message.addRecipients(Message.RecipientType.TO, email_destino[0]);
+		message.setSubject(asunto);
+		BodyPart messageBodyPart1 = new MimeBodyPart();
+		messageBodyPart1.setText(mensaje);
+		BodyPart messageBodyPart2 = new MimeBodyPart();
+		DataSource src= new FileDataSource(anexo[0]);
+		messageBodyPart2.setDataHandler(new DataHandler(src));
+		messageBodyPart2.setFileName(anexo[0]);
+		Multipart multipart = new MimeMultipart();
+		multipart.addBodyPart(messageBodyPart1);
+		multipart.addBodyPart(messageBodyPart2);
+		message.setContent(multipart);
+		Transport transport = session.getTransport("smtp");
+		transport.connect(host_email, email_remitente, email_remitente_pass);
+		transport.sendMessage(message, message.getAllRecipients());
+		transport.close();
 	}
 
 	private String handleGetRequest(HttpExchange httpExchange) {
@@ -116,7 +114,7 @@ public class GestorHTTP implements HttpHandler {
 
 			// crear un nuevo delincuente
 			// meter la imagen a subir en la carpeta images
-			htmlResponse = "<html><Head><H1>Lista de Delincuentes: </H1><body>"
+			htmlResponse = "<html><Head><H1>Agregar delincuente: </H1><body>"
 					+ "<form name=\"createDelincuente\" method=\"post\" action=\"mostrarTodos\">\r\n"
 					+ "Alias: <input type=\"text\" name=\"alias\"/> <br/>"
 					+ "nombreCompleto: <input type=\"text\" name=\"nombreCompleto\"/> <br/>"
@@ -172,7 +170,6 @@ public class GestorHTTP implements HttpHandler {
 		String log = "IP: " + ip + "\n" + "Día y hora: " + hora + "\n";
 
 		FileWriter fw = new FileWriter("log.txt");
-		System.out.println("Entra");
 		fw.write(log);
 		fw.close();
 	}
@@ -300,9 +297,7 @@ public class GestorHTTP implements HttpHandler {
 
 		String[] list = requestParamValue.split("&");
 		System.out.println(Arrays.toString(list));
-		String[] mail = { "hesalu@floridauniversitaria.es" };
-
-		enviarMail(requestParamValue, "Delincuente añadido", "emailRemitente", "emailDestino", "contraseña");
+		
 		// meter la imagen a subir en la carpeta images
 		byte[] fileContent;
 		try {
@@ -341,6 +336,32 @@ public class GestorHTTP implements HttpHandler {
 				FileWriter file = new FileWriter("./src/es/florida/servred/delincuentes.json");
 				file.write(finalJson.toJSONString());
 				file.close();
+				System.out.println("Delincuente añadido");
+				
+				
+				//Envio de mail
+				String strMsg ="Se ha añadido un delincuente nuevo a la lista";
+				String strAsunto = "Delincuente añadido";
+				//correo electronico del que enviar
+				String emailRemitente = "";
+				//Contraseña del correo electrónico
+				String emailRemitentePass = "";
+				String hostmail = "smtp.office365.com";
+				String portmail = "587";
+				//email de destino ha enviar
+				String[] mailDestino = { "" };
+				String [] anexo = {"./src/es/florida/servred/delincuentes.json"};
+				
+				
+				try {
+					enviarMail(strMsg, strAsunto, emailRemitente, emailRemitentePass, hostmail, portmail,mailDestino, anexo);
+				} catch (UnsupportedEncodingException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (MessagingException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
