@@ -45,6 +45,19 @@ import com.sun.net.httpserver.*;
 
 public class GestorHTTP implements HttpHandler {
 
+	/**
+	 * Función que envía un correo electrónico al remitente indicado
+	 * @param mensaje
+	 * @param asunto
+	 * @param email_remitente
+	 * @param email_remitente_pass
+	 * @param host_email
+	 * @param port_email
+	 * @param email_destino
+	 * @param anexo
+	 * @throws UnsupportedEncodingException
+	 * @throws MessagingException
+	 */
 	private void enviarMail(String mensaje, String asunto, String email_remitente, String email_remitente_pass,
 			String host_email, String port_email, String[] email_destino, String[] anexo) throws
 	UnsupportedEncodingException, MessagingException {
@@ -77,6 +90,11 @@ public class GestorHTTP implements HttpHandler {
 		transport.close();
 	}
 
+	/**
+	 * Función para manejar las solicitudes "GET"
+	 * @param httpExchange
+	 * @return Devuelve un String con el valor de la solicitud o "error"
+	 */
 	private String handleGetRequest(HttpExchange httpExchange) {
 
 		if (httpExchange.getRequestURI().toString().lastIndexOf("?") != -1
@@ -97,6 +115,12 @@ public class GestorHTTP implements HttpHandler {
 
 	}
 
+	/**
+	 * Función para manejar la respuesta de las solicitudes "GET"
+	 * @param httpExchange
+	 * @param requestParamValue
+	 * @throws IOException
+	 */
 	private void handleGETResponse(HttpExchange httpExchange, String requestParamValue) throws IOException {
 
 		OutputStream outputStream = httpExchange.getResponseBody();
@@ -137,6 +161,11 @@ public class GestorHTTP implements HttpHandler {
 		outputStream.close();
 	}
 
+	/**
+	 * Función para manejar la respuesta de las solicitudes "POST"
+	 * @param httpExchange
+	 * @return
+	 */
 	private String handlePostRequest(HttpExchange httpExchange) {
 		System.out.println("Recibida URI tipo PUT: " + httpExchange.getRequestBody().toString());
 		InputStream is = httpExchange.getRequestBody();
@@ -155,6 +184,12 @@ public class GestorHTTP implements HttpHandler {
 		return sb.toString();
 	}
 
+	/**
+	 * Función para dar respuesta a las solicitudes "POST"
+	 * @param httpExchange
+	 * @param requestParamValue
+	 * @throws IOException
+	 */
 	private void handlePOSTResponse(HttpExchange httpExchange, String requestParamValue) throws IOException {
 		// System.out.println("handlePOSTResponse");
 		OutputStream outputStream = httpExchange.getResponseBody();
@@ -165,6 +200,12 @@ public class GestorHTTP implements HttpHandler {
 		outputStream.close();
 	}
 
+	/**
+	 * Función para crear un archivo log.txt con la hora de conexión y la ip del usuario
+	 * @param ip
+	 * @param hora
+	 * @throws IOException
+	 */
 	private void crearLog(String ip, String hora) throws IOException {
 
 		String log = "IP: " + ip + "\n" + "Día y hora: " + hora + "\n";
@@ -208,6 +249,10 @@ public class GestorHTTP implements HttpHandler {
 		}
 	}
 
+	/**
+	 * Función para mostrar todas las entradas guardadas
+	 * @return Devuelve un String con todos los datos existentes
+	 */
 	String mostrarTodos() {
 
 		String list = "";
@@ -240,6 +285,11 @@ public class GestorHTTP implements HttpHandler {
 		return list;
 	}
 
+	/**
+	 * Función para buscar los datos de un delincuente por su alias
+	 * @param alias
+	 * @return Devuelve los datos del delincuente
+	 */
 	String delincuente(String alias) {
 
 		String datos = "";
@@ -293,6 +343,12 @@ public class GestorHTTP implements HttpHandler {
 
 	}
 
+	/**
+	 * Registra y guarda los datos de un delincuente introducido por una petición "POST"
+	 * @param requestParamValue
+	 * @throws AddressException
+	 * @throws MessagingException
+	 */
 	void guardarDelincuente(String requestParamValue) throws AddressException, MessagingException {
 
 		String[] list = requestParamValue.split("&");
