@@ -44,46 +44,39 @@ import com.sun.net.httpserver.*;
 
 public class GestorHTTP implements HttpHandler {
 
-	@SuppressWarnings("unused")
-	private void enviarMail(String mensaje, String asunto, String email_remitente, String email_remitente_pass,
-			String host_email, String port_email, String[] email_destino, String[] anexo)
+	private void enviarMail(String mensaje, String asunto, String email_remitente, String email_destino, String pass)
 			throws AddressException, MessagingException {
 
-		Properties props = System.getProperties();
+		// using host as localhost
+		String host = "127.0.0.1";
 
-		props.put("mail.smtp.host", host_email);
-		props.put("mail.smtp.user", email_remitente);
-		props.put("mail.smtp.clave", email_remitente_pass);
-		props.put("mail.smtp.auth", "true");
-		props.put("mail.smtp.starttls.enable", "true");
-		props.put("mail.smtp.port", port_email);
+		Properties properties = System.getProperties();
 
-		Session session = Session.getDefaultInstance(props);
+		properties.setProperty("mail.smtp.host", host);
 
-		MimeMessage message = new MimeMessage(session);
-		message.setFrom(new InternetAddress(email_remitente));
-		message.addRecipients(Message.RecipientType.TO, email_destino[0]);
-		message.setSubject(asunto);
+		Session session = Session.getDefaultInstance(properties);
 
-		BodyPart messageBodyPart1 = new MimeBodyPart();
-		messageBodyPart1.setText(mensaje);
+		try {
+			MimeMessage message = new MimeMessage(session);
 
-		BodyPart messageBodyPart2 = new MimeBodyPart();
-		DataSource src = new FileDataSource(anexo[0]);
-		messageBodyPart2.setDataHandler(new DataHandler(src));
-		messageBodyPart2.setFileName(anexo[0]);
+			message.setFrom(new InternetAddress(email_remitente));
 
-		Multipart multipart = new MimeMultipart();
-		multipart.addBodyPart(messageBodyPart1);
-		multipart.addBodyPart(messageBodyPart2);
+			message.addRecipient(Message.RecipientType.TO, new InternetAddress(email_destino));
 
-		message.setContent(multipart);
+			message.setSubject(asunto);
 
-		Transport transport = session.getTransport("smtp");
-		transport.connect(host_email, email_remitente, email_remitente_pass);
-		transport.sendMessage(message, message.getAllRecipients());
-		transport.close();
+			message.setText(mensaje);
 
+			Transport transport = session.getTransport("smtp");
+			transport.connect(host, email_remitente, pass);
+			transport.sendMessage(message, message.getAllRecipients());
+			transport.close();
+
+
+			System.out.println("Mail successfully sent");
+		} catch (MessagingException mex) {
+			mex.printStackTrace();
+		}
 	}
 
 	private String handleGetRequest(HttpExchange httpExchange) {
@@ -173,11 +166,11 @@ public class GestorHTTP implements HttpHandler {
 		outputStream.flush();
 		outputStream.close();
 	}
-	
+
 	private void crearLog(String ip, String hora) throws IOException {
-		
-		String log = "IP: " + ip + "\n" + "Día y hora: " + hora + "\n"; 
-		
+
+		String log = "IP: " + ip + "\n" + "Día y hora: " + hora + "\n";
+
 		FileWriter fw = new FileWriter("log.txt");
 		System.out.println("Entra");
 		fw.write(log);
@@ -186,14 +179,13 @@ public class GestorHTTP implements HttpHandler {
 
 	@Override
 	public void handle(HttpExchange httpExchange) throws IOException {
-		
-		
+
 		String ip = httpExchange.getRemoteAddress().toString();
 		String hora = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date());
-		crearLog(ip,hora);
-		
+		crearLog(ip, hora);
+
 		System.out.println("handle");
-		
+
 		String requestParamValue = null;
 
 		if ("GET".equals(httpExchange.getRequestMethod())) {
@@ -208,7 +200,12 @@ public class GestorHTTP implements HttpHandler {
 
 			requestParamValue = handlePostRequest(httpExchange);
 
-			guardarDelincuente(requestParamValue);
+			try {
+				guardarDelincuente(requestParamValue);
+			} catch (MessagingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
 			handlePOSTResponse(httpExchange, requestParamValue);
 		}
@@ -299,13 +296,16 @@ public class GestorHTTP implements HttpHandler {
 
 	}
 
-	void guardarDelincuente(String requestParamValue) {
+	void guardarDelincuente(String requestParamValue) throws AddressException, MessagingException {
 
 		String[] list = requestParamValue.split("&");
 		System.out.println(Arrays.toString(list));
+		String[] mail = { "hesalu@floridauniversitaria.es" };
+
+		enviarMail(requestParamValue, "Delincuente añadido", "emailRemitente", "emailDestino", "contraseña");
 		// meter la imagen a subir en la carpeta images
 		byte[] fileContent;
-		try {			
+		try {
 
 			JSONParser parser = new JSONParser();
 
