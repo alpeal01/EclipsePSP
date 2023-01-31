@@ -1,6 +1,7 @@
 package es.florida.servred;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -10,8 +11,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.Properties;
 import java.util.stream.Collectors;
@@ -170,12 +173,27 @@ public class GestorHTTP implements HttpHandler {
 		outputStream.flush();
 		outputStream.close();
 	}
+	
+	private void crearLog(String ip, String hora) throws IOException {
+		
+		String log = "IP: " + ip + "\n" + "Día y hora: " + hora + "\n"; 
+		
+		FileWriter fw = new FileWriter("log.txt");
+		System.out.println("Entra");
+		fw.write(log);
+		fw.close();
+	}
 
 	@Override
 	public void handle(HttpExchange httpExchange) throws IOException {
-
+		
+		
+		String ip = httpExchange.getRemoteAddress().toString();
+		String hora = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date());
+		crearLog(ip,hora);
+		
 		System.out.println("handle");
-
+		
 		String requestParamValue = null;
 
 		if ("GET".equals(httpExchange.getRequestMethod())) {
